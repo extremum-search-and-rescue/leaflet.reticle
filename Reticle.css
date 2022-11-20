@@ -1,0 +1,35 @@
+﻿.reticle-control {
+    pointer-events: none;
+}
+
+@media (pointer: coarse) {
+    .reticle-text {
+        font-size: 7px;
+    }
+}
+
+@media (pointer: fine) {
+    .reticle-text {
+        font-size: 8px;
+    }
+}
+
+.reticle-text.gis-theme-light {
+    fill: darkred;
+    text-shadow: 1px 1px white;
+}
+
+.reticle-text.gis-theme-dark {
+    fill: white;
+    text-shadow: 1px 1px black;
+}
+
+.reticle.gis-theme-light {
+    fill: darkred;
+    opacity: 0.6;
+}
+
+.reticle.gis-theme-dark {
+    fill: white;
+    opacity: 0.6;
+}
