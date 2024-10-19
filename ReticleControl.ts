@@ -120,11 +120,11 @@
             const widthLabel = `<text class="gis-themeaware reticle-text ${theme}" x="${halfSize + widthRatio * maxReticleWidth - 16}" y="${halfSize - 4}">${widthText}</text>`;
             const heightLabel = `<text class="gis-themeaware reticle-text ${theme}" x="${halfSize - 8}" y="${halfSize + heightRatio * maxReticleHeight + 12}">${heightText}</text>`;
 
-            function _widthTicks(ratio: number, tickHeightRatio?: number) {
+            const _widthTicks = (ratio: number, tickHeightRatio?: number) => {
                 tickHeightRatio = tickHeightRatio ? tickHeightRatio : 1;
                 return `${getRect(halfSize - 2 + widthRatio * maxReticleWidth * ratio, halfSize, 2, 8 * tickHeightRatio)}`
             }
-            function _heightTicks(ratio: number, tickWidthRatio?: number) {
+            const _heightTicks = (ratio: number, tickWidthRatio?: number) => {
                 tickWidthRatio = tickWidthRatio ? tickWidthRatio : 1;
                 return `${getRect(halfSize, halfSize - 2 + heightRatio * maxReticleHeight * ratio, 8 * tickWidthRatio, 2)}`
             }
