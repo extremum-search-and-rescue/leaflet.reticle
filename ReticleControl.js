@@ -73,9 +73,9 @@ var L;
                 }
                 return [roundDist / maxDist, `${roundDist} ${unitStr}`];
             }
-            function getRect(xStart, yStart, width, height) {
+            const getRect = (xStart, yStart, width, height) => {
                 return `<rect class="gis-themeaware reticle ${theme}" x=${xStart} y="${yStart}" width="${width}" height="${height}"></rect>`;
-            }
+            };
             function _calculateMaxDistance(xS, yS, xE, yE) {
                 return self._map.distance(self._map.containerPointToLatLng([xS, yS]), self._map.containerPointToLatLng([xE, yE]));
             }

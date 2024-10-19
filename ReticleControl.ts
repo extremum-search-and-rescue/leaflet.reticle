@@ -73,7 +73,7 @@
                 }
                 return [roundDist / maxDist, `${roundDist} ${unitStr}`];
             }
-            function getRect(xStart: number, yStart: number, width: number, height: number) {
+            const getRect = (xStart: number, yStart: number, width: number, height: number) => {
                 return `<rect class="gis-themeaware reticle ${theme}" x=${xStart} y="${yStart}" width="${width}" height="${height}"></rect>`;
             }
             function _calculateMaxDistance(xS: number, yS: number, xE: number, yE: number) {
